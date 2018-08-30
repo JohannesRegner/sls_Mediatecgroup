@@ -1,0 +1,25 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:pxa="http://typo3.org/ns/Pixelant/PxaSocialFeed/ViewHelpers">
+
+    <f:section name="main">
+        <pxa:tokenFields as="fields" type="{tokenItem.socialType}">
+            <f:for each="{fields}" as="field">
+                <b><f:translate key="pxasocialfeed_module.labels.{field}"/></b>: <pxa:getTokenCredential token="{tokenItem}" credential="{field}"/><br />
+            </f:for>
+        </pxa:tokenFields>
+
+        <f:if condition="{tokenItem.socialType} == 2">
+            <f:if condition="{pxa:getTokenCredential(token: tokenItem, credential: 'accessToken')}">
+                <f:then><b><f:translate key="pxasocialfeed_module.labels.accessToken"/></b>: <pxa:getTokenCredential token="{tokenItem}" credential="accessToken"/></f:then>
+                <f:else>
+                    <a class="btn btn-default" id="get-instagram-toket" target="_blank" href="https://api.instagram.com/oauth/authorize/?client_id={pxa:getTokenCredential(token: tokenItem, credential: 'clientId')}&redirect_uri={f:uri.action(action:'addAccessToken', absolute:1, arguments: {token: tokenItem})->f:format.urlencode()}&response_type=code&scope=public_content">
+                        <f:translate key="pxasocialfeed_module.labels.generateAccessToken"/>
+                    </a>
+                    <br>
+                    <p id="get-instagram-hidden-tip" style="display: none;"><b><f:translate key="pxasocialfeed_module.labels.get_instagram_hidden_tip"/></b></p>
+                </f:else>
+            </f:if>
+        </f:if>
+    </f:section>
+</div>

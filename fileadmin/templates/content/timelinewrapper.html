@@ -1,0 +1,32 @@
+<div class="timeline_bar">
+    <div class="row">
+        <!-- Start timeline -->
+        <f:if condition="{data.header}">
+            <div class="col-sm-12 end_timeline">
+             <span>{data.header}</span>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_timelineelemente}">
+            <f:for each="{data.tx_mask_timelineelemente}" as="data_item">
+                <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+            </f:for>
+        </f:if>
+        <f:if condition="{data.tx_mask_endtext}">
+            <div class="col-sm-12 end_timeline">
+                <span> {data.tx_mask_endtext}</span>
+            </div>
+        </f:if>
+
+    </div>
+    <!--/ row -->
+</div>
+
+
+
+
+
+
+
+
+
+

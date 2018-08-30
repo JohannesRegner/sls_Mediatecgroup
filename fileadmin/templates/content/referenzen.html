@@ -1,0 +1,76 @@
+<section class="hg_section pt-20 pb-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <!-- Title element -->
+                <div class="kl-title-block">
+
+                    <!-- Title -->
+                    <f:if condition="{data.header}">
+                        <h3 class="tbk__title">
+                            {data.header}
+                        </h3>
+                     </f:if>
+                    <!-- Spacer with custom height -->
+                    <div style="height: 20px;"></div>
+                </div>
+                <!--/ Title element -->
+            </div>
+            <!--/ col-sm-12 col-md-12 -->
+            <f:if condition="{data.tx_mask_referenzitems}">
+                    <f:for each="{data.tx_mask_referenzitems}" as="data_item">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <!-- Image box element style 2 -->
+                            <div class="box image-boxes imgboxes_style2">
+                                <!-- Image box link wrapper -->
+
+                                <a href="javascript:void(0);" target="_self" class="slidingDetails imgboxes-wrapper" title="">
+                                    <f:if condition="{data_item.tx_mask_referenzimage}">
+                                        <f:for each="{data_item.tx_mask_referenzimage}" as="file">
+                                            <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-fluid imgbox_image cover-fit-img" />
+
+                                        </f:for>
+                                    </f:if>
+                                    <!-- Content wrapper -->
+                                    <div class="details">
+                                        <f:if condition="{data_item.tx_mask_referenztitel}">
+                                            <!-- Title -->
+                                            <h4>
+                                                {data_item.tx_mask_referenztitel}
+                                            </h4>
+                                            <!--/ Title -->
+
+                                        </f:if>
+                                        <f:if condition="{data_item.tx_mask_refrenztext}">
+                                            <p>
+                                                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_refrenztext}</f:format.html>
+                                            </p>
+
+                                        </f:if>
+                                        <!-- Description -->
+
+                                        <!--/ Description -->
+                                    </div>
+                                    <!--/ Content wrapper -->
+                                </a>
+                                <!--/ Image box link wrapper -->
+                            </div>
+                            <!--/ Image box element style 2 -->
+                        </div>
+                        <!--/ col-sm-12 col-md-6 col-lg-4 -->
+                    </f:for>
+            </f:if>
+
+
+
+
+
+
+
+
+
+        </div>
+        <!--/ row -->
+    </div>
+    <!--/ container -->
+</section>

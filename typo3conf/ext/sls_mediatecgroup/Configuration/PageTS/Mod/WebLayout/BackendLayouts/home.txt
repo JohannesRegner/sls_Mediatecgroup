@@ -1,0 +1,39 @@
+#
+# BACKENDLAYOUT: EXAMPLE
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            home {
+                title = Startseite
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+                             1 {
+                               columns {
+                                1 {
+                                   name = Slider
+                                    colPos = 99
+                                    }
+                                   }
+                                 }
+
+                                2 {
+                                    columns {
+                                        1 {
+                                            name = Inhalt
+                                            colPos = 0
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                }
+                icon = EXT:sls_mediatecgroup/Resources/Public/Icons/BackendLayouts/example.svg
+            }
+        }
+    }
+}

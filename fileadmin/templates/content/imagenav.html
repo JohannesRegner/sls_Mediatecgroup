@@ -1,0 +1,47 @@
+<f:if condition="{data.tx_mask_bildernavigation}">
+  <div class="row">
+<f:for each="{data.tx_mask_bildernavigation}" as="data_item">
+  <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="box image-boxes imgboxes_style1">
+        <f:link.typolink parameter="{data_item.tx_mask_seitenlink}"  target="_self" class="hoverBorder imgboxes-wrapper" title="{data_item.tx_mask_bildbeschreibung}">
+        <span class="hoverBorderWrapper">
+          <f:if condition="{data_item.tx_mask_bild}">
+            <f:for each="{data_item.tx_mask_bild}" as="file">
+              <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+
+            </f:for>
+            </f:if>
+          <span class="theHoverBorder"></span>
+        </span>
+          <f:if condition="{data_item.tx_mask_bildbeschreibung}">
+        <h6>
+          {data_item.tx_mask_bildbeschreibung}
+        </h6>
+          </f:if>
+        <!--/ More Button -->
+        </f:link.typolink>
+      <f:if condition="{data_item.tx_mask_titel}">
+      <h3 class="m_title imgboxes-title">
+        {data_item.tx_mask_titel}
+      </h3>
+      </f:if>
+
+      <f:if condition="{data_item.tx_mask_beschreibung}">
+        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_beschreibung}</f:format.html><br />
+      </f:if>
+      <!--/ Description -->
+    </div>
+    <!--/ Image boxes style 1 default element -->
+  </div>
+
+
+
+
+
+
+
+
+</f:for>
+  </div>
+</f:if>
+

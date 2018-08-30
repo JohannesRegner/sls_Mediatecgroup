@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pxa="http://typo3.org/ns/Pixelant/PxaSocialFeed/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 blog-section-pagination mb-sm-30">
+        <div class="itemListView clearfix eBlog">
+        <f:for each="{feeds}" as="feed">
+            <div class="itemContainer">
+                <a href="{feed.postUrl}" target="_blank">
+                <!-- Post header -->
+                <div class="itemHeader">
+                    <!-- Title -->
+
+                    <f:if condition="{feed.title}">
+                        <h3 class="itemTitle">{feed.title}</h3>
+                    </f:if>
+                    <!-- Post details -->
+                    <div class="post_details">
+						<span class="catItemDateCreated"><f:format.date format="d.m.Y - H:i:s">{feed.postDate}</f:format.date> </span>
+                    </div>
+                    <!-- Post details -->
+                </div>
+                <!--/ Post header -->
+
+                <!-- Post content body-->
+                <div class="itemBody">
+                    <!-- Item intro text -->
+                    <div class="itemIntroText">
+                        <!-- Post image -->
+                        <div class="hg_post_image">
+                            <a href="{feed.postUrl}" class="float-left" title="" target="_blank">
+                                <img src="{feed.image}" class="" width="457" height="320px" alt="{feed.title}" title="{feed.title}" style="max-height:320px">
+                            </a>
+                        </div>
+                        <!--/ Post image -->
+                        <p>
+                            <f:format.raw>{feed.message -> pxa:parseMessage(type: feed.configuration.token.socialType) -> f:format.nl2br()}</f:format.raw>
+                        </p>
+                    </div>
+                    <!-- end Item intro text -->
+                    <div class="clear"></div>
+
+
+                </div>
+                </a>
+                <!--/ Post content body-->
+            </div>
+
+        </f:for>
+
+        </div>
+    </div>
+</div>
+</html>
+

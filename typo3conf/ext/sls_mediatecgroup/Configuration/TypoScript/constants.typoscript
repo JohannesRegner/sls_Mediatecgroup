@@ -1,0 +1,58 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:sls_mediatecgroup/Resources/Public/Images/logo.svg
+        fileInverted = EXT:sls_mediatecgroup/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = SLS Mediatecgroup
+        linktitle = SLS Mediatecgroup
+    }
+    favicon {
+        file = EXT:sls_mediatecgroup/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:sls_mediatecgroup/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:sls_mediatecgroup/Resources/Private/Partials/Page/
+        templateRootPath = EXT:sls_mediatecgroup/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:sls_mediatecgroup/Resources/Private/Layouts/
+        partialRootPath = EXT:sls_mediatecgroup/Resources/Private/Partials/
+        templateRootPath = EXT:sls_mediatecgroup/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:sls_mediatecgroup/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:sls_mediatecgroup/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:sls_mediatecgroup/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+#######################################
+### REMOVE BOOTSTRAP LESS CONSTANTS ###
+#######################################
+plugin.bootstrap_package.settings.less >
+plugin.bootstrap_package.settings.overrideLessVariables >

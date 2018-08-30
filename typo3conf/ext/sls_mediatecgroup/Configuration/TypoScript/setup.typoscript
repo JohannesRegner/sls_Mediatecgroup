@@ -1,0 +1,152 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sls_mediatecgroup/Configuration/TypoScript/nav/mainNav.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sls_mediatecgroup/Configuration/TypoScript/nav/footerNav.ts">
+
+##############
+#### PAGE ####
+##############
+page {
+    bodyTag = <body class="preloader">
+
+    includeCSSLibs {
+        googlewebfont >
+        bootstrap = EXT:sls_mediatecgroup/Resources/Public/Css/bootstrap.min.css
+        css3panels = EXT:sls_mediatecgroup/Resources/Public/Css/css3-panels.css
+        fontawesome = EXT:sls_mediatecgroup/Resources/Public/Css/font-awesome.min.css
+    }
+
+    includeCSS {
+
+        theme = EXT:sls_mediatecgroup/Resources/Public/Css/template.css
+        infocard = EXT:sls_mediatecgroup/Resources/Public/Css/infocard.css
+        responsive = EXT:sls_mediatecgroup/Resources/Public/Css/responsive.css
+        basesize = EXT:sls_mediatecgroup/Resources/Public/Css/base-sizing.css
+        pxa_social_feed_1 <
+        socialfeed = EXT:sls_mediatecgroup/Resources/Public/Css/socialfeed.css
+        custom = EXT:sls_mediatecgroup/Resources/Public/Css/custom.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+        bootstrap >
+        bootstrap = EXT:sls_mediatecgroup/Resources/Public/JavaScript/bootstrap.min.js
+       magnific_popup = EXT:sls_mediatecgroup/Resources/Public/JavaScript/jquery.magnific-popup.min.js
+    }
+
+    includeJSFooter {
+        sls_mediatecgroup_scripts = EXT:sls_mediatecgroup/Resources/Public/JavaScript/Dist/scripts.js
+        template_scripts = EXT:sls_mediatecgroup/Resources/Public/JavaScript/kl-scripts.js
+        sls = EXT:sls_mediatecgroup/Resources/Public/JavaScript/sls.js
+
+    }
+}
+
+config {
+    concatenateJs = 1
+    compressJs = 1
+    compressCss = 0
+    concatenateCss = 0
+}
+
+
+lib {
+    pageTitle = TEXT
+    pageTitle.data = page : title
+
+    pageImage = IMG_RESOURCE
+    pageImage {
+        file {
+            import = uploads/media/
+            import.data = levelmedia:-1, slide
+            treatIdAsReference = 1
+            import.listNum = 0
+            #width = 1600
+            height = 800
+        }
+    }
+}
+
+
+
+##################
+#### Plugins #####
+##################
+
+plugin.tx_pxasocialfeed {
+    view {
+ 		templateRootPaths {
+            0 = EXT:pxa_social_feed/Resources/Private/Templates/
+            10 = EXT:sls_mediatecgroup/Resources/Private/Templates/FacebookFeed/
+        }
+ 		partialRootPaths {
+            0= EXT:pxa_social_feed/Resources/Private/Partials/
+            10 = EXT:sls_mediatecgroup/Resources/Private/Partials/FacebookFeed/
+        }
+ 		layoutRootPaths {
+            0 = EXT:pxa_social_feed/Resources/Private/Layouts/
+            10 = EXT:sls_mediatecgroup/Resources/Private/Layouts/FacebookFeed/
+        }
+ 	}
+ }
+
+
+plugin.tx_indexedsearch.view {
+    templateRootPaths {
+        0 = EXT:indexed_search/Resources/Private/Templates/
+        10 = {$plugin.tx_indexedsearch.view.templateRootPath}
+        20 = EXT:sls_mediatecgroup/Resources/Private/Templates/IndexedSearch/
+    }
+    partialRootPaths {
+        0 = EXT:indexed_search/Resources/Private/Partials/
+        10 = {$plugin.tx_indexedsearch.view.partialRootPath}
+        20 = EXT:sls_mediatecgroup/Resources/Private/Partials/IndexedSearch/
+    }
+}
+
+
+##################
+#### Favicon #####
+##################
+
+page.headerData.20 = TEXT
+page.headerData.20.value (
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#b20f24" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/mstile-310x310.png" />
+        <meta name="theme-color" content="#b20f24">
+)
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    variables {
+        logoName = TEXT
+        logoName.value = {$logoName}
+    }
+}

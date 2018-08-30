@@ -1,0 +1,31 @@
+#
+# BACKENDLAYOUT: EXAMPLE
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            contentfull {
+                title = Inhaltsseite Breit
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+
+                                1 {
+                                    columns {
+                                        1 {
+                                            name = Inhalt
+                                            colPos = 0
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                }
+                icon = EXT:sls_mediatecgroup/Resources/Public/Icons/BackendLayouts/example.svg
+            }
+        }
+    }
+}

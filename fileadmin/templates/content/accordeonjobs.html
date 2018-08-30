@@ -1,0 +1,40 @@
+<f:if condition="{data.tx_mask_stellen}">
+<section class="hg_section pt-20 pb-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <!-- Accordions element style 3 -->
+                <div class="hg_accordion_element style3">
+                    <div class="th-accordion">
+                        <f:for each="{data.tx_mask_stellen}" as="data_item" iteration="objIterator">
+
+                            <div class="acc-group">
+                                <f:if condition="{data_item.tx_mask_stellenbeschreibung}">
+                                    <div id="heading{objIterator.cycle}">
+                                        <a data-toggle="collapse" data-target="#acc{objIterator.cycle}" class="collapsed" aria-expanded="false" aria-controls="acc{objIterator.cycle}">
+                                            {data_item.tx_mask_stellenbeschreibung}<span class="acc-icon"></span>
+                                        </a>
+                                    </div>
+                                </f:if>
+                                <div id="acc{objIterator.cycle}" class="collapse" aria-labelledby="heading{objIterator.cycle}" data-parent=".style3" style="">
+                                    <!-- Content -->
+                                    <div class="content">
+                                        <!-- Description -->
+                                        <f:if condition="{data_item.tx_mask_stellenanforderungen}">
+                                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_stellenanforderungen}</f:format.html>
+                                        </f:if>
+                                        <!--/ Description -->
+                                    </div>
+                                    <!--/ Content -->
+                                </div>
+                            </div>
+
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</f:if>

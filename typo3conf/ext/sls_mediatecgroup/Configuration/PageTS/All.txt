@@ -1,0 +1,7 @@
+#
+# PageTS for SLS Mediatecgroup
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sls_mediatecgroup/Configuration/PageTS/RTE.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sls_mediatecgroup/Configuration/PageTS/TCEFORM.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sls_mediatecgroup/Configuration/PageTS/TCEMAIN.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sls_mediatecgroup/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">

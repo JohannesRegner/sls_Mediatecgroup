@@ -1,0 +1,33 @@
+<section class="hg_section pt-70">
+  <div class="container">
+    <div class="row">
+      <f:if condition="{data.header}">
+        <h3 class="tbk__title fs-l fw-bold tcolor">
+          {data.header}
+        </h3>
+      </f:if>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-3 co-lg-3 d-flex align-self-center justify-content-center">
+        <!-- Button full color style -->
+        <f:if condition="{data.image}">
+          <f:for each="{data.image}" as="file">
+            <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+            {file.description}
+          </f:for>
+        </f:if>
+      </div>
+      <div class="col-sm-12 col-md-9 col-lg-9">
+
+        <f:if condition="{data.bodytext}">
+          <h4 class="tbk__subtitle fs-s fw-thin">
+            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html><br />
+          </h4>
+        </f:if>
+      </div>
+      <!--/ col-sm-12 col-md-3 co-lg-3 d-flex align-self-center justify-content-center -->
+    </div>
+    <!--/ row -->
+  </div>
+  <!--/ container -->
+</section>

@@ -1,0 +1,45 @@
+
+<section class="hg_section--relative hg_ovhidden tbg pt-50 pb-50">
+    <!-- Background source -->
+    <div class="kl-bg-source">
+        <!-- Gloss overlay -->
+        <div class="kl-bg-source__overlay-gloss">
+        </div>
+        <!--/ Gloss overlay -->
+    </div>
+    <!--/ Background source -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-9 col-lg-9">
+                <!-- Title element with top line -->
+                <div class="kl-title-block clearfix text-left tbk-symbol--line tbk--colored tbk-icon-pos--before-title">
+                    <!-- Title bottom symbol -->
+                    <div class="tbk__symbol ">
+                        <span></span>
+                    </div>
+                    <!--/ Title bottom symbol -->
+
+                    <!-- Title with custom kl-font-alt font, size, white color and semibold style-->
+                    <f:if condition="{data.header}">
+                        <h2 class="tbk__title kl-font-alt fs-xl white">{data.header}</h2>
+                    </f:if>
+                    <f:if condition="{data.bodytext}">
+                        <h4 class="tbk__subtitle fs-m white fw-thin"><f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html> </h4>
+                    </f:if>
+                    <!-- Sub-title with custom font size, light gray2 color and thin style -->
+                </div>
+                <!--/ Title element with top line -->
+            </div>
+            <!--/ col-sm-12 col-md-9 col-lg-9 -->
+
+            <div class="col-sm-12 col-md-3 col-lg-3 align-self-center">
+                <div class="d-flex justify-content-center">
+
+            <!--/ col-sm-12 col-md-3 col-lg-3 -->
+        </div>
+        <!--/ row -->
+    </div>
+    <!--/ container -->
+
+</section>

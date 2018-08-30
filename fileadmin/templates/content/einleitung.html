@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+  <header>
+    <f:if condition="{data.header}">
+      <h2 class="element-header ">
+        {data.header}
+      </h2>
+    </f:if>
+    <f:if condition="{data.subheader}">
+      <h3 class="element-subheader "><span>{data.subheader}</span></h3>
+
+    </f:if>
+  </header>
+    <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-8">
+      <!-- Text box -->
+      <div class="text_box">
+        <f:if condition="{data.tx_mask_beschreibung}">
+          <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_beschreibung}</f:format.html><br />
+        </f:if>
+      </div>
+      <!--/ Text box -->
+    </div>
+      <div class="col-sm-12 col-md-12 col-lg-4  kl-title-block text-left tbk-symbol--line_border">
+        <div class="kl-title-block text-left tbk-symbol--line">
+          <!-- Title -->
+          <h3>
+            Ihr Ansprechpartner
+          </h3>
+          <!--/ Title -->
+
+          <!-- Title bottom line symbol -->
+
+        </div>
+
+        <f:if condition="{data.tx_mask_ansprechpartnerbild}">
+          <f:for each="{data.tx_mask_ansprechpartnerbild}" as="file">
+            <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
+          </f:for>
+        </f:if>
+
+        <f:if condition="{data.tx_mask_ansprechpartner_name}">
+            <h3>{data.tx_mask_ansprechpartner_name}</h3>
+        </f:if>
+
+        <f:if condition="{data.tx_mask_ansprechpartner_telefon}">
+            <i class="fa fa-phone"></i> {data.tx_mask_ansprechpartner_telefon} <br/>
+        </f:if>
+
+        <f:if condition="{data.tx_mask_ansprechpartner_email}">
+          <i class="fa fa-envelope"></i> <f:link.email email="{data.tx_mask_ansprechpartner_email}" /><br />
+        </f:if>
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+

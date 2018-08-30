@@ -1,0 +1,29 @@
+<f:if condition="{data.image}">
+  <f:for each="{data.image}" as="file">
+    <div class="ib2-style3 ib2-text-color-dark-theme ib2-custom mt-20 mb-20" style="background-image: url('{f:uri.image(image:file)}');">
+  </f:for>
+</f:if>
+  <div class="ib2-inner">
+    <f:if condition="{data.header}">
+      <!-- Title -->
+      <h4 class="ib2-info-message">
+        {data.header}
+      </h4>
+      <!--/ Title -->
+    </f:if>
+    <!-- Content -->
+    <div class="ib2-content">
+      <!-- Content title -->
+      <!-- Content text -->
+      <f:if condition="{data.bodytext}">
+        <div class="ib2-content--text">
+          <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+        </div>
+      </f:if>
+
+      <!--/ Content text -->
+    </div>
+    <!--/ Content -->
+  </div>
+  <!--/ Info box v2 style 3 wrapper - .ib2-inner -->
+</div>
