@@ -108,7 +108,8 @@
 .css3panel:first-child .css3panel-caption {padding-left: 80px;}
 .css3panel:last-child .css3panel-caption {padding-right:80px;}
 .css3panel-caption.css3caption--middle {bottom:auto; top:50%; -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); }
-.css3panel-title { font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif; }
+.css3panel-title { font-family: "VerdanaBold","Helvetica Neue",Helvetica,Arial,sans-serif; text-shadow: 1px 1px #797978;}
+.css3panel-text { text-shadow: 1px 1px #797978;}
 /* Fading in Caption */
 .cssp-capt-fadein .css3panel-title,
 .cssp-capt-fadein .css3panel-text,
@@ -116,13 +117,13 @@
 .cssp-capt-fadein .css3panel:hover .css3panel-title,
 .cssp-capt-fadein .css3panel:hover .css3panel-text,
 .cssp-capt-fadein .css3panel:hover .css3panel-btn-area {opacity:1; visibility: visible;}
-/* Fading Out Caption */
+/* Fading Out Caption
 .cssp-capt-fadeout .css3panel-title,
 .cssp-capt-fadeout .css3panel-text,
 .cssp-capt-fadeout .css3panel-btn-area {opacity:1; visibility: visible; -webkit-transition:opacity .15s ease-out, visibility .15s ease-out; transition:opacity .15s ease-out, visibility .15s ease-out;}
 .cssp-capt-fadeout .css3panel:hover .css3panel-title,
 .cssp-capt-fadeout .css3panel:hover .css3panel-text {opacity:0; visibility: hidden;}
-.cssp-capt-fadeout .css3panel:hover .css3panel-btn-area {}
+.cssp-capt-fadeout .css3panel:hover .css3panel-btn-area {} */
 /* Slide in Caption */
 .cssp-capt-slidein .css3panel-title,
 .cssp-capt-slidein .css3panel-text,

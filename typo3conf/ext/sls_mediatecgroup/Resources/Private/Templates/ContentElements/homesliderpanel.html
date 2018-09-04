@@ -1,4 +1,4 @@
-
+<f:link.typolink parameter="{data.tx_mask_infolink}" target="_self" title="<f:format.html parseFuncTSPath='lib.parseFunc'>{data.bodytext}</f:format.html>">
   <!-- Panel wrapper with custom height -->
   <div class="css3panel-inner" style="height:700px">
     <!-- Main image wrapper with custom height -->
@@ -24,7 +24,7 @@
 
   <!-- Caption -->
   <div class="css3panel-caption">
-    <!-- Link with title -->
+  <!--
     <f:if condition="{data.header}">
       <a href="#" target="_self" title=" {data.header}">
         <h3 class="css3panel-title ff-alternative title-size-normal">
@@ -35,24 +35,25 @@
 
     <!--/ Link with title -->
 
-    <!-- Description -->
+    <!-- Description
     <div class="css3panel-text">
       <f:if condition="{data.bodytext}">
         <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
       </f:if>
     </div>
-    <!--/ Description -->
+     Description -->
 
     <!-- Button -->
-    <f:if condition="{data.tx_mask_infolink}">
+
       <div class="css3panel-btn-area">
         <f:link.typolink parameter="{data.tx_mask_infolink}" class="btn btn-fullcolor btn-skewed" target="_self">Weitere Infos</f:link.typolink><br />
         <!-- Button skewed full color skewed style -->
 
       </div>
 
-    </f:if>
+
 
 
   </div>
   <!--/ Caption -->
+</f:link.typolink>

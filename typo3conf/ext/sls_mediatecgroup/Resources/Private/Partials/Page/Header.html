@@ -13,40 +13,7 @@
                     <!-- Header Main Left Side -->
                     <div class="site-header-main-left col d-flex justify-content-start align-items-center">
                         <!-- Header search -->
-                        <div id="search" class="header-search">
-                            <a href="#" class="searchBtn "><span class="fas fa-search white-icon"></span></a>
-                            <div class="search-container">
 
-                                <f:form class="header-searchform" pageUid="26" method="post" id="searchform" noCacheHash="false" absolute="0"  action="search" extensionName="IndexedSearch" pluginName="pi2" controller="Search">
-
-                                    <div class="hidden tx-indexedsearch-hidden-fields">
-                                        <input name="tx_indexedsearch_pi2[search][_sections]" value="0" type="hidden">
-                                        <input id="tx_indexedsearch_freeIndexUid" name="tx_indexedsearch_pi2[search][_freeIndexUid]" value="_" type="hidden">
-                                        <input id="tx_indexedsearch_pointer" name="tx_indexedsearch_pi2[search][pointer]" value="0" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][ext]" value="" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][searchType]" value="1" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][defaultOperand]" value="0" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][mediaType]" value="-1" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][sortOrder]" value="rank_flag" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][group]" value="" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][languageUid]" value="-1" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][desc]" value="" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][numberOfResults]" value="10" type="hidden">
-                                        <input name="tx_indexedsearch_pi2[search][extendedSearch]" value="" type="hidden">
-                                    </div>
-
-
-
-                                    <f:form.textfield name="search[sword]" value="" id="tx-indexedsearch-searchbox-sword" class="inputbox" placeholder="Webseite durchsuchen..." />
-
-                                    <button class="searchsubmit fas fa-search white-icon" id="searchsubmit" type="submit" name="tx_indexedsearch_pi2[search][submitButton]" value=""></button>
-                                    <span class="kl-field-bg"></span>
-
-
-                                </f:form>
-
-                            </div>
-                        </div>
                         <!--/ Header search -->
                     </div>
                     <!--/ Header Main Left Side -->
@@ -57,59 +24,14 @@
                         <div class="logo-container hasInfoCard logosize--yes d-flex">
                             <!-- Logo -->
                             <h1 class="site-logo logo align-self-center" id="logo">
-                                <a href="index.html" title="">
-                                    <f:image src="EXT:sls_mediatecgroup/Resources/Public/Images/logos/{logoName}.svg" class="logo-img" alt="SLS Mediatecgroup" title="SLS Mediatecgroup" />
-                                </a>
+
+                                    <f:link.page pageUid="1">
+                                        <f:image src="EXT:sls_mediatecgroup/Resources/Public/Images/logos/{logoName}.svg" class="logo-img" alt="SLS Mediatecgroup" title="SLS Mediatecgroup" />
+                                    </f:link.page>
+
+
                             </h1>
                             <!--/ Logo -->
-
-                            <!-- InfoCard -->
-                            <div id="infocard" class="logo-infocard">
-                                <div class="custom">
-                                    <div class="row">
-                                        <div class="col-sm-6 left-side d-flex">
-                                            <div class="align-self-center">
-                                                <div class="infocard-wrapper text-center">
-                                                    <div style="background:#ffffff">
-                                                    <f:image src="EXT:sls_mediatecgroup/Resources/Public/Images/logos/event.svg" class="mb-25" alt="SLS Mediatecgroup" title="SLS Mediatecgroup" />
-                                                    </div>
-                                                        <p>
-                                                        Wir realisieren Technik mit <strong>Leidenschaft</strong>.
-                                                    </p>
-                                                </div>
-                                                <!--/ infocard-wrapper -->
-                                            </div>
-                                            <!--/ .align-self-center -->
-                                        </div>
-                                        <!--/ col-sm-6 left-side d-flex -->
-
-                                        <div class="col-sm-6 right-side">
-                                            <div class="custom contact-details">
-                                                <p>
-                                                    KONTAKT<br/>
-                                                    Konradsbronner Straße 19<br/>
-                                                    73499 Wört<br/>
-                                                    <a href="mailto:leidenschaft@sls-mediatecgroup.com">leidenschaft@sls-mediatecgroup.com</a>
-                                                </p>
-                                            </div>
-                                            <div style="height:20px;">
-                                            </div>
-                                            <!-- Social links clean style -->
-                                            <ul class="social-icons sc--clean">
-                                                <li><a href="#" target="_self" class="fab fa-twitter" title="Twitter"></a></li>
-                                                <li><a href="#" target="_self" class="fab fa-facebook-f" title="Facebook"></a></li>
-                                                <li><a href="#" target="_self" class="fab fa-dribbble" title="Dribbble"></a></li>
-                                                <li><a href="#" target="_blank" class="fab fa-google-plus-g" title="Google Plus"></a></li>
-                                            </ul>
-                                            <!--/ Social links clean style -->
-                                        </div>
-                                        <!--/ col-sm-6 right-side -->
-                                    </div>
-                                    <!--/ row -->
-                                </div>
-                                <!--/ custom -->
-                            </div>
-                            <!--/ InfoCard -->
                         </div>
                         <!--/ logo container-->
                     </div>
