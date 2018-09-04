@@ -40,7 +40,7 @@ lib.mainNav {
         #IFSUB.ATagParams = class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
         #IFSUB.ATagParams = class="dropdown-toggle disabled" role="button" data-toggle="dropdown" data-target="#"
             IFSUB.ATagBeforeWrap = 1
-            IFSUB.stdWrap.wrap = | <b class="caret hidden-xs"></b>
+            IFSUB.stdWrap.wrap = |&nbsp;<i class="fa fa-caret-down hidden-xs"></i>
 
             ACTIFSUB = 1
             ACTIFSUB < .IFSUB
