@@ -1,0 +1,14 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:sls_mediatecgroup/Resources/Private/Templates/Form/'
+                partialRootPaths:
+                  20: 'EXT:sls_mediatecgroup/Resources/Private/Partials/Form/'
+                layoutRootPaths:
+                  20: 'EXT:sls_mediatecgroup/Resources/Private/Layouts/Form/'
