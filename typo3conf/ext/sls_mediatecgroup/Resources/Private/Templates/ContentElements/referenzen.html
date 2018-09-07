@@ -7,24 +7,45 @@
 
                     <!-- Title -->
                     <f:if condition="{data.header}">
-                        <h3 class="tbk__title">
+                        <h2 >
                             {data.header}
-                        </h3>
+                        </h2>
                      </f:if>
                     <!-- Spacer with custom height -->
-                    <div style="height: 20px;"></div>
+                    <div style="height: 10px;"></div>
+                    <div class="row">
+                        <div>
+                            <button class="btn-element btn btn-fullcolor filter-button" data-filter="all" style="padding-bottom:10px;">Alle</button>
+                            <button class="btn btn-default filter-button" data-filter="event" style="padding-bottom:10px;">Eventsolution</button>
+                            <button class="btn btn-default filter-button" data-filter="install" style="padding-bottom:10px;">Installsolution</button>
+                            <button class="btn btn-default filter-button" data-filter="support" style="padding-bottom:10px;">Supportsolution</button>
+                            <button class="btn btn-default filter-button" data-filter="stage" style="padding-bottom:10px;">Stagemobilverleih</button>
+                        </div>
+
+                    </div>
+                    <div style="height: 10px;"></div>
                 </div>
                 <!--/ Title element -->
+
+
             </div>
             <!--/ col-sm-12 col-md-12 -->
+
             <f:if condition="{data.tx_mask_referenzitems}">
                     <f:for each="{data.tx_mask_referenzitems}" as="data_item">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="col-sm-12 col-md-6 col-lg-4 filter
+                        <f:switch expression='{data_item.tx_mask_referenzbereich}'>
+                        <f:case value='1'>event</f:case>
+                        <f:case value='2'>install</f:case>
+                        <f:case value='3'>support</f:case>
+                        <f:case value='4'>stage</f:case>
+                        </f:switch>
+                        ">
                             <!-- Image box element style 2 -->
                             <div class="box image-boxes imgboxes_style2">
                                 <!-- Image box link wrapper -->
 
-                                <a href="javascript:void(0);" target="_self" class="slidingDetails imgboxes-wrapper" title="">
+                                    <f:link.typolink parameter="{data_item.tx_mask_referenlink}" target="_self" class="slidingDetails imgboxes-wrapper">
                                     <f:if condition="{data_item.tx_mask_referenzimage}">
                                         <f:for each="{data_item.tx_mask_referenzimage}" as="file">
                                             <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="img-fluid imgbox_image cover-fit-img" />
@@ -52,7 +73,7 @@
                                         <!--/ Description -->
                                     </div>
                                     <!--/ Content wrapper -->
-                                </a>
+                                    </f:link.typolink>
                                 <!--/ Image box link wrapper -->
                             </div>
                             <!--/ Image box element style 2 -->
