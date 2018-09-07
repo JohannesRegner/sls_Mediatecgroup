@@ -71,8 +71,8 @@
 .css3panel-inner { position:relative; -webkit-transform: skewX(-10deg); -ms-transform: skewX(-10deg); transform: skewX(-10deg); -webkit-backface-visibility:hidden; overflow: hidden; -webkit-transition: box-shadow .2s ease-out; transition: box-shadow .2s ease-out; box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.7);}
 
 /* Image */
- .css3panel-mainimage-wrapper {position: relative; margin-left: -60px; margin-right: -60px; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: skewX(10deg); -ms-transform: skewX(10deg); transform: skewX(10deg); -webkit-backface-visibility: hidden; }
-.css3panel-mainimage {position:absolute; top:-2px; left:-2px; right:-2px; bottom:-2px; background-position: 50% 50%; background-repeat: no-repeat; background-size:cover; -webkit-backface-visibility:hidden; -webkit-transition: .2s ease-out; transition: .2s ease-out; }
+ .css3panel-mainimage-wrapper {position: relative;background:#ffffff;margin-left: -60px; margin-right: -60px; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: skewX(10deg); -ms-transform: skewX(10deg); transform: skewX(10deg); -webkit-backface-visibility: hidden; }
+.css3panel-mainimage {position:absolute; top:-2px; left:-2px; right:-2px; bottom:-2px; background-position: 50% 50%; background-repeat: no-repeat; /*background-size:cover;*/ -webkit-backface-visibility:hidden; -webkit-transition: .2s ease-out; transition: .2s ease-out; }
  /* Image overlay */
 .css3p-overlay {position:absolute; left:0; top:0; right:0; bottom:0; -webkit-transition:opacity .15s ease-out; transition:opacity .15s ease-out;}
 .css3panel:hover .css3p-overlay {opacity:0; }
@@ -205,6 +205,14 @@ background: linear-gradient(to right,  rgba(255,255,255,0.25) 40%,rgba(255,255,2
 
 /* Fixes CSS3 Panels */
 @media (min-width: 992px) and (max-width: 1200px) {
+
+    .css3panel-mainimage.anim--grayscale {
+        -webkit-filter:none;
+        filter:none;
+        -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out;
+    }
+
+
     .css3panel .css3panel-caption {padding-right:30px;}
     .css3panels-container.css3panels--resize:hover .css3panel .css3panel-caption {width: 130%; margin-left: -30%;}
     .css3panels-container.css3panels--resize:hover .css3panel:hover .css3panel-caption {/*width: 100%; margin-left: 0%;*/}
@@ -234,6 +242,11 @@ background: linear-gradient(to right,  rgba(255,255,255,0.25) 40%,rgba(255,255,2
 
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .css3panel-mainimage.anim--grayscale {
+        -webkit-filter:none;
+        filter:none;
+        -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out;
+    }
     .css3panel .css3panel-caption {padding-right: 25px;}
     .css3panels-container.css3panels--resize:hover .css3panel .css3panel-caption {/*width: 130%; margin-left: -30%;*/}
     .css3panels-container.css3panels--resize:hover .css3panel:hover .css3panel-caption {/*width: 100%; margin-left: 0%;*/}
@@ -258,7 +271,11 @@ background: linear-gradient(to right,  rgba(255,255,255,0.25) 40%,rgba(255,255,2
 }
 
 @media (max-width: 767px) {
-
+    .css3panel-mainimage.anim--grayscale {
+        -webkit-filter:none;
+        filter:none;
+        -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out;
+    }
     .css3panels-container {
         margin-left: 0; margin-right: 0;
         -webkit-box-orient: vertical;
@@ -310,11 +327,16 @@ background: linear-gradient(to right,  rgba(255,255,255,0.25) 40%,rgba(255,255,2
     .captiontitle--wbg,
     .captiontitle--dbg {padding: 10px 0 10px 25px; }
     .css3panel-text {font-size: 14px; max-width: 70%; margin-right: 0;}
-    .css3panel-btn-area {clear: none; float: left; max-width: 30%; position: absolute; top: 0; left: 0; text-align: left; margin-top: 5px; margin-right: 0; }
+    .css3panel-btn-area {clear: none; float: left; max-width: 30%; position: absolute; top: 0; left: 0; text-align: center; margin-top: 5px; margin-right: 0; }
     .css3panel-btn-area .btn:first-child { margin-bottom:15px; }
 }
 
 @media (max-width: 480px) {
+    .css3panel-mainimage.anim--grayscale {
+        -webkit-filter:none;
+        filter:none;
+        -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out;
+    }
     .css3panel:first-child {padding-top:0;padding-bottom: 0;box-sizing: border-box;width: 100%;}
     .css3panel:first-child .css3panel-inner {top: auto;}
     .css3panel:first-child .css3panel-caption {margin-top:0;}
