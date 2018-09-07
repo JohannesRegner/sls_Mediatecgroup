@@ -292,7 +292,7 @@ var KallyasConfig = {
 // Responsive Main-Menu
 	var page_wrapper = $('#page_wrapper'),
 		responsive_trigger = $('.zn-res-trigger'),
-		zn_back_text = 'Back',
+		zn_back_text = 'Zurück',
 		back_text = '<li class="zn_res_menu_go_back"><span class="zn_res_back_icon fas fa-chevron-left"></span><a href="#">'+zn_back_text+'</a><a href="#" class="zn-close-menu-button"><span class="fas fa-times"></span></a></li>',
 		cloned_menu = $('#main-menu > ul').clone().attr({id:"zn-res-menu", "class":""});
 
@@ -577,7 +577,7 @@ var KallyasConfig = {
 		});
 
 		// Enable WooCommerce lightbox
-		$('.single_product_main_image .images a').magnificPopup({
+		$('.lightbox').magnificPopup({
 			mainClass: 'mfp-fade',
 			type: 'image',
 			gallery: {enabled:true},
