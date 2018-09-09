@@ -1,12 +1,47 @@
-/* ==========================================================================
-*
-* Custom CSS Stylesheet. This is where you should add your own styles!
-*
-** ========================================================================== */
+/*
 
-/* Simple style overrides or custom adds */
+SLS Maincolors
+gray =  #797978
+red = #b20f24
 
-.some-css-selector {font-size:13px;}
+
+ */
+
+.ansprechpartner h3 {
+    padding: 9px 14px;
+    display: block;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    background: #797978;
+    color:#fff;
+
+}
+
+.ansprechpartner .kontaktdetails {
+    background: #797978;
+    color:#fff;
+    font-size:12px;
+    padding:15px;
+    min-height:121px;
+}
+
+.ansprechpartner img {
+    min-height:121px;
+}
+
+.ansprechpartner .kontaktdetails .ptitle{
+    font-size:18px;
+}
+
+.ansprechpartner .kontaktdetails a{
+    color:#fff;
+}
+
+.ansprechpartner .kontaktdetails a:hover{
+    color:#b20f24;
+}
+
+
 
 
 
@@ -21,13 +56,17 @@
 
 /** Higher screens+ **/
 @media only screen and (min-width : 1921px){
-
+    .ansprechpartner .kontaktdetails {
+        margin-right:-20px;
+    }
 }
 
 
 /** Desktop+ **/
 @media (min-width: 1200px) {
-
+    .ansprechpartner .kontaktdetails {
+        margin-right:-20px;
+    }
 }
 
 

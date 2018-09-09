@@ -22,36 +22,44 @@
       <!--/ Text box -->
     </div>
       <div class="col-sm-12 col-md-12 col-lg-4  kl-title-block text-left tbk-symbol--line_border">
-        <div class="kl-title-block text-left tbk-symbol--line">
-          <!-- Title -->
-          <h3>
-            Ihr Ansprechpartner
-          </h3>
-          <!--/ Title -->
+          <div class="ansprechpartner">
+            <div class="row">
+              <div class="col-lg-12">
+                <h3>Ansprechpartner</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-7 col-md-7">
+                <div class="kontaktdetails">
+                  <f:if condition="{data.tx_mask_ansprechpartner_name}">
+                    <span class="ptitle">{data.tx_mask_ansprechpartner_name}</span>
+                    <br/>
+                    <f:if condition="{data.media}">
+                      <f:for each="{data.media}" as="file">
+                        xx
 
-          <!-- Title bottom line symbol -->
+                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" /><br />
+                        xx
+                      </f:for>
+                    </f:if>
 
-        </div>
+                  </f:if>
+                  {data.tx_mask_ansprechpartner_telefon} | <f:link.email email="{data.tx_mask_ansprechpartner_email}" > <i class="fa fa-envelope"></i></f:link.email>
+                </div>
 
-        <f:if condition="{data.tx_mask_ansprechpartnerbild}">
-          <f:for each="{data.tx_mask_ansprechpartnerbild}" as="file">
-            <f:image image="{file}" alt="{file.alternative}" title="{file.title}"  />
-          </f:for>
-        </f:if>
+              </div>
+              <div class="col-5 col-md-5">
+                <f:if condition="{data.tx_mask_ansprechpartnerbild}">
+                  <f:for each="{data.tx_mask_ansprechpartnerbild}" as="file">
+                    <div class="ansprechpartner_image">
+                      <f:image image="{file}" alt="{file.alternative}" title="{file.title}" height="120c"/>
+                    </div>
 
-        <f:if condition="{data.tx_mask_ansprechpartner_name}">
-            <h3>{data.tx_mask_ansprechpartner_name}</h3>
-        </f:if>
-
-        <f:if condition="{data.tx_mask_ansprechpartner_telefon}">
-            <i class="fa fa-phone"></i> {data.tx_mask_ansprechpartner_telefon} <br/>
-        </f:if>
-
-        <f:if condition="{data.tx_mask_ansprechpartner_email}">
-          <i class="fa fa-envelope"></i> <f:link.email email="{data.tx_mask_ansprechpartner_email}" /><br />
-        </f:if>
-
-
+                  </f:for>
+                </f:if>
+              </div>
+            </div>
+          </div>
 
 
       </div>

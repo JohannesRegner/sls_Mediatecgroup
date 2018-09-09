@@ -1,0 +1,52 @@
+#
+# BACKENDLAYOUT: EXAMPLE
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            content2colsfull {
+                title = Inhaltsseite 2 / Voll
+                config {
+                    backend_layout {
+                        colCount = 2
+                        rowCount = 3
+                        rows {
+                         1  {
+                              columns {
+                                 1 {
+                                    name = Inhalt
+                                    colPos = 0
+                                    colspan = 2
+                                    }
+                                   }
+                                  }
+                                2 {
+                                    columns {
+                                        1 {
+                                            name = Links
+                                            colPos = 1
+                                        }
+                                        2 {
+                                            name = Rechts
+                                            colPos = 2
+                                         }
+                                    }
+                                }
+                                3 {
+                                    columns {
+                                        1 {
+                                            name = Inhalt
+                                            colPos = 4
+                                            colspan = 2
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                }
+                icon = EXT:sls_mediatecgroup/Resources/Public/Icons/BackendLayouts/example.svg
+            }
+        }
+    }
+}
