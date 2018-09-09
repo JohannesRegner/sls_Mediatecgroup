@@ -34,17 +34,16 @@
                   <f:if condition="{data.tx_mask_ansprechpartner_name}">
                     <span class="ptitle">{data.tx_mask_ansprechpartner_name}</span>
                     <br/>
+                  </f:if>
+                  <p> {data.tx_mask_ansprechpartner_telefon} | <f:link.email email="{data.tx_mask_ansprechpartner_email}" > <i class="fa fa-envelope"></i></f:link.email></p>
                     <f:if condition="{data.media}">
                       <f:for each="{data.media}" as="file">
-                        xx
-
-                        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" /><br />
-                        xx
+                        <p><a href="fileadmin/{file.identifier}"><i class="fa fa-id-card"></i> vCard herunterladen</a></p>
                       </f:for>
                     </f:if>
 
-                  </f:if>
-                  {data.tx_mask_ansprechpartner_telefon} | <f:link.email email="{data.tx_mask_ansprechpartner_email}" > <i class="fa fa-envelope"></i></f:link.email>
+
+
                 </div>
 
               </div>
