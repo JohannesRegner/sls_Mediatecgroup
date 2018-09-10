@@ -1,0 +1,25 @@
+
+
+
+<div class="col-12  pt-20">
+  <div class="row">
+    <f:if condition="{data.tx_mask_buttontext}">
+      <a href="javascript:void(0);" onclick="$('a.lightbox').eq(0).trigger('click'); return false;ret" target="_self" class="btn-element btn btn-lined lined-custom" title="{data.tx_mask_buttontext}">
+        <span> {data.tx_mask_buttontext}</span>
+      </a>
+    </f:if>
+    <div class="hidden">
+      <f:if condition="{data.image}">
+        <f:for each="{data.image}" as="file">
+          <a href="/fileadmin/{file.identifier}" title="" data-lightbox-caption="" class="lightbox" rel="referenz-group">
+          <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="20" />
+          </a>
+        </f:for>
+      </f:if>
+    </div>
+  </div>
+
+
+
+
+</div>

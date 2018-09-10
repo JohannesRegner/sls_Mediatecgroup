@@ -1,0 +1,34 @@
+<f:if condition="{data.tx_mask_kundenstimmen}">
+<section class="hg_section pt-80 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div id="testimonial-slider" class="owl-carousel owl-theme">
+                    <f:for each="{data.tx_mask_kundenstimmen}" as="data_item">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <f:if condition="{data_item.tx_mask_text}">
+                                    <p class="description"> <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_text}</f:format.html></p>
+                                </f:if>
+                            </div>
+                            <f:if condition="{data_item.tx_mask_name}">
+                                <h3 class="title">{data_item.tx_mask_name}</h3>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_position}">
+                                 <span class="post">{data_item.tx_mask_position}</span>
+                            </f:if>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+            <!--/ col-sm-12 col-md-12 -->
+        </div>
+        <!--/ row -->
+    </div>
+    <!--/ container -->
+</section>
+
+</f:if>

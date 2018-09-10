@@ -1,0 +1,98 @@
+<f:if condition="{data.tx_mask_fakten}">
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <f:if condition="{data.header}">
+            <header><h3 class="element-header ">
+                {data.header}
+            </h3></header>
+        </f:if>
+
+        <!-- Steps boxes element style 5 -->
+        <div class="process-list  ">
+
+            <ul class="processitems">
+
+                <li class="item1">
+                    <!-- Icon wrapper -->
+                    <div class="ico-wrapper">
+                        <f:if condition="{data.tx_mask_bereich}">
+                            <f:switch expression="{data.tx_mask_bereich}">
+                                <f:case value='1'>
+                                     <span>
+                                         <f:image src="fileadmin/user_upload/Logos/OhneSLS/Eventsolution.svg" title="Eventsolution" alt="Eventsolution"/>
+                                    </span>
+                                </f:case>
+                                <f:case value='2'>
+                                     <span>
+                                         <f:image src="fileadmin/user_upload/Logos/OhneSLS/Installsolution.svg" title="Installsolution" alt="Installsolution"/>
+                                    </span>
+                                </f:case>
+                                <f:case value='3'>
+                                     <span>
+                                         <f:image src="fileadmin/user_upload/Logos/OhneSLS/Supportsolution.svg" title="Supportsolution" alt="Supportsolution"/>
+                                    </span>
+                                </f:case>
+                                <f:case value='4'>
+                                     <span>
+                                         <f:image src="fileadmin/user_upload/Logos/OhneSLS/Stagemobilverleih.svg" title="Stagemobilverleih" alt="Stagemobilverleih"/>
+                                    </span>
+                                </f:case>
+                            </f:switch>
+                        </f:if>
+                    </div>
+                    <h4>Bereich</h4>
+                    <f:if condition="{data.tx_mask_bereich}">
+                        <f:switch expression="{data.tx_mask_bereich}">
+                            <f:case value='1'>
+                                    <p>Eventsolution</p>
+                            </f:case>
+                            <f:case value='2'>
+                                <p>Installsolution</p>
+                            </f:case>
+                            <f:case value='3'>
+                                <p>Supportsolution</p>
+                            </f:case>
+                            <f:case value='4'>
+                                <p>Stagemobilverleih</p>
+                            </f:case>
+                        </f:switch>
+                    </f:if>
+
+                    <!--/ Details -->
+                </li>
+
+                <f:for each="{data.tx_mask_fakten}" as="data_item" iteration="iterator">
+                    <li class="item{iterator.cycle+1} {f:if(condition:'{iterator.isLast}',then:'last',else:'')}">
+                        <!-- Icon wrapper -->
+                        <div class="ico-wrapper">
+                            <!-- Icon = .icon-gi-ico-10 -->
+                            <f:if condition="{data_item.tx_mask_iconauswahl}">
+                                <f:switch expression="{data_item.tx_mask_iconauswahl}">
+                                    <f:case value="1"> <span class="fa fa-building"></span></f:case>
+                                    <f:case value="2"> <span class="fa fa-users"></span></f:case>
+                                    <f:case value="3"><span class="fa fa-handshake"></span></f:case>
+                                    <f:case value="4"><span class="fa fa-map-marker-alt"></span></f:case>
+                                </f:switch>
+                            </f:if>
+
+
+
+
+                        </div>
+                        <f:if condition="{data_item.tx_mask_headline}">
+                           <h4>{data_item.tx_mask_headline}</h4>
+                        </f:if>
+                        <f:if condition="{data_item.tx_mask_beschreibung}">
+                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.tx_mask_beschreibung}</f:format.html><br />
+                        </f:if>
+                        <!--/ Details -->
+                    </li>
+                </f:for>
+            </ul>
+
+        </div>
+        <!--/ Steps boxes element style 5 -->
+    </div>
+    <!--/ col-sm-12 col-md-12 -->
+</div>
+</f:if>
