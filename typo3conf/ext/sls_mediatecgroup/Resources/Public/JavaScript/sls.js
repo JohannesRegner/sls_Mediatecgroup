@@ -1,5 +1,15 @@
 $(document).ready(function(){
-
+    $("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,3],
+        itemsDesktopSmall:[980,2],
+        itemsTablet:[768,2],
+        itemsMobile:[650,1],
+        dots:true,
+        nav:false,
+        slideSpeed:1000,
+        autoplay:true
+    });
 
     $(".filter-button").click(function(){
         var value = $(this).attr('data-filter');

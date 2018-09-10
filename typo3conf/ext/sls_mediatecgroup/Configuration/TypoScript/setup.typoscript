@@ -16,6 +16,8 @@ page {
         bootstrap = EXT:sls_mediatecgroup/Resources/Public/Css/bootstrap.min.css
         css3panels = EXT:sls_mediatecgroup/Resources/Public/Css/css3-panels.css
         fontawesome = EXT:sls_mediatecgroup/Resources/Public/Css/font-awesome.min.css
+        owlmain = EXT:sls_mediatecgroup/Resources/Public/Css/owl.carousel.min.css
+        owltheme = EXT:sls_mediatecgroup/Resources/Public/Css/owl.theme.default.min.css
     }
 
     includeCSS {
@@ -41,6 +43,7 @@ page {
         bootstrap >
         bootstrap = EXT:sls_mediatecgroup/Resources/Public/JavaScript/bootstrap.min.js
        magnific_popup = EXT:sls_mediatecgroup/Resources/Public/JavaScript/jquery.magnific-popup.min.js
+
     }
 
     includeJSFooter {
