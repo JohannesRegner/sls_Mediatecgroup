@@ -54,7 +54,7 @@ red = #b20f24
 }
 
 .testimonial{
-    margin: 0 20px 40px;
+    margin: 0 20px 0px;
 }
 .testimonial .testimonial-content{
     padding: 35px 25px 35px 50px;
@@ -126,6 +126,10 @@ red = #b20f24
 .owl-theme .owl-dot .active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span{
     background: #b20f24;
+}
+
+.pswp {
+    display:none;
 }
 
 

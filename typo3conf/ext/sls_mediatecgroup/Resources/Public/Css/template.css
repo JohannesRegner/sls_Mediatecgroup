@@ -4787,7 +4787,7 @@ ul.world-map-triggers[data-columns="3"] li {width: -webkit-calc(33.3333% - 20px)
 .static-content__source { position: absolute; top: 0; left: 0; bottom: 0; right: 0;}
 
 /* Safe padding */
-.kl-slideshow .kl-slideshow-safepadding {padding-top:170px; padding-bottom: 50px;}
+/*.kl-slideshow .kl-slideshow-safepadding {padding-top:170px; padding-bottom: 50px;}*/
 
 .static-content--fullscreen {height:100vh;}
 .static-content--fullscreen .th-google_map {height:100vh !important;}

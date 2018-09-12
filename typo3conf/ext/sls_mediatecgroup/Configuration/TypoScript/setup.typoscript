@@ -18,6 +18,7 @@ page {
         fontawesome = EXT:sls_mediatecgroup/Resources/Public/Css/font-awesome.min.css
         owlmain = EXT:sls_mediatecgroup/Resources/Public/Css/owl.carousel.min.css
         owltheme = EXT:sls_mediatecgroup/Resources/Public/Css/owl.theme.default.min.css
+        custom = EXT:sls_mediatecgroup/Resources/Public/Css/custom.css
     }
 
     includeCSS {
@@ -26,9 +27,10 @@ page {
         infocard = EXT:sls_mediatecgroup/Resources/Public/Css/infocard.css
         responsive = EXT:sls_mediatecgroup/Resources/Public/Css/responsive.css
         basesize = EXT:sls_mediatecgroup/Resources/Public/Css/base-sizing.css
-        pxa_social_feed_1 <
+
         socialfeed = EXT:sls_mediatecgroup/Resources/Public/Css/socialfeed.css
-        custom = EXT:sls_mediatecgroup/Resources/Public/Css/custom.css
+
+        pxa_social_feed_1 <
     }
 
     includeJSLibs {
@@ -57,8 +59,8 @@ page {
 config {
     concatenateJs = 1
     compressJs = 1
-    compressCss = 0
-    concatenateCss = 0
+    compressCss = 1
+    concatenateCss = 1
 }
 
 
