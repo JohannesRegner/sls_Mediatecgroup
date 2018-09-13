@@ -8,7 +8,8 @@ $(document).ready(function(){
         dots:true,
         nav:false,
         slideSpeed:1000,
-        autoplay:true
+        autoplay:true,
+        loop:true
     });
 
     $(".filter-button").click(function(){
