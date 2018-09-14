@@ -289,18 +289,142 @@ var KallyasConfig = {
 // END Sticky Header
 
 
+
+// Responsive Main-Menu
+    var page_wrapper = $('#page_wrapper'),
+        responsive_trigger = $('.zn-res-trigger'),
+        zn_back_text = 'Zurück',
+        back_text = '<li class="zn_res_menu_go_back"><span class="zn_res_back_icon"><i class="fa fa-icon-chevron-left" aria-hidden="true"></i></span><a href="#">'+zn_back_text+'</a><a href="#" class="zn-close-menu-button"></a></li>',
+        cloned_menu = $('#main-menu > ul').clone().attr({id:"zn-res-menu", "class":""});
+
+    var start_responsive_menu = function(){
+
+        var responsive_menu = cloned_menu.prependTo(page_wrapper);
+        var set_height = function(){
+            var _menu = $('.zn-menu-visible').last(),
+                height = _menu.css({height:'auto'}).outerHeight(true),
+                window_height  = $(window).height(),
+                adminbar_height = 0,
+                admin_bar = $('#wpadminbar');
+
+            // CHECK IF WE HAVE THE ADMIN BAR VISIBLE
+            if(height < window_height) {
+                height = window_height;
+                if ( admin_bar.length > 0 ) {
+                    adminbar_height = admin_bar.outerHeight(true);
+                    height = height - adminbar_height;
+                }
+            }
+            _menu.attr('style','');
+            page_wrapper.css({'height':height});
+        };
+
+
+
+        // BIND OPEN MENU TRIGGER
+        responsive_trigger.click(function(e){
+            e.preventDefault();
+
+            responsive_menu.addClass('zn-menu-visible');
+            set_height();
+
+        });
+
+        // Close the menu when a link is clicked
+        responsive_menu.find( 'a:not([rel*="mfp-"])' ).on('click',function(e){
+            $( '.zn_res_menu_go_back' ).first().trigger( 'click' );
+        });
+
+        // ADD ARROWS TO SUBMENUS TRIGGERS
+        responsive_menu.find('li:has(> ul)').addClass('zn_res_has_submenu').prepend('<span class="zn_res_submenu_trigger"><i class="fa fa-icon-chevron-right" aria-hidden="true"></i></span>');
+        // ADD BACK BUTTONS
+        responsive_menu.find('.zn_res_has_submenu > ul').addBack().prepend(back_text);
+
+        // REMOVE BACK BUTTON LINK
+        $( '.zn_res_menu_go_back' ).click(function(e){
+            e.preventDefault();
+            var active_menu = $(this).closest('.zn-menu-visible');
+            active_menu.removeClass('zn-menu-visible');
+            set_height();
+            if( active_menu.is('#zn-res-menu') ) {
+                page_wrapper.css({'height':'auto'});
+            }
+        });
+
+        // OPEN SUBMENU'S ON CLICK
+        $('.zn_res_submenu_trigger').click(function(e){
+            e.preventDefault();
+            $(this).siblings('ul').addClass('zn-menu-visible');
+            set_height();
+        });
+
+        var closeMenu = function(){
+            cloned_menu.removeClass('zn-menu-visible');
+            responsive_trigger.removeClass('is-active');
+            removeHeight();
+        };
+    }
+
+    // MAIN TRIGGER FOR ACTIVATING THE RESPONSIVE MENU
+    var menu_activated = false,
+        triggerMenu = function(){
+            if ( $(window).width() < 1200 ) {
+                if ( !menu_activated ){
+                    start_responsive_menu();
+                    menu_activated = true;
+                }
+                page_wrapper.addClass('zn_res_menu_visible');
+            }
+            else{
+                // WE SHOULD HIDE THE MENU
+                $('.zn-menu-visible').removeClass('zn-menu-visible');
+                page_wrapper.css({'height':'auto'}).removeClass('zn_res_menu_visible');
+            }
+        };
+
+    $(document).ready(function() {
+        triggerMenu();
+    });
+
+    $( window ).on( 'load resize' , function(){
+        triggerMenu();
+        var is = false;
+        if ( $(window).width() < 1200 ) {
+            if(is) return;
+            //@wpk
+            // Close button for the responsive menu
+            var closeMenuSender = $('.zn-close-menu-button');
+            if(closeMenuSender){
+                closeMenuSender.on('click', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var parent = $('#zn-res-menu');
+                    parent.removeClass('zn-menu-visible');
+                    //parent.removeClass('zn-menu-visible');
+                    $('.zn-menu-visible', parent).removeClass('zn-menu-visible');
+                    $('#page_wrapper').css({'height':'auto'});
+                });
+            }
+            is = true;
+        }
+    });
+// END Responsive Main-Menu
+
+
+
+
 // Responsive Main-Menu
 	var page_wrapper = $('#page_wrapper'),
 		responsive_trigger = $('.zn-res-trigger'),
 		zn_back_text = 'Zurück',
-		back_text = '<li class="zn_res_menu_go_back"><span class="zn_res_back_icon fas fa-chevron-left"></span><a href="#">'+zn_back_text+'</a><a href="#" class="zn-close-menu-button"><span class="fas fa-times"></span></a></li>',
+		back_text = '<li class="zn_res_menu_go_back"><span class="zn_res_back_icon fas fa-chevron-left"><i class="fa fa-chevron-left"></i></span><a href="#">'+zn_back_text+'</a><a href="#" class="zn-close-menu-button"><span class="fas fa-times"></span></a></li>',
 		cloned_menu = $('#main-menu > ul').clone().attr({id:"zn-res-menu", "class":""});
 
 	var start_responsive_menu = function(){
 
 		var responsive_menu = cloned_menu.prependTo(page_wrapper);
 		var responsive_menu_overlay = $('<div class="zn-res-menu-overlay"/>').insertAfter(cloned_menu);
-		
+
 		var set_height = function(){
 			var _menu = $('.zn-menu-visible').last(),
 				height = _menu.css({height:'auto'}).outerHeight(true),
@@ -337,7 +461,7 @@ var KallyasConfig = {
 		});
 
 		// ADD ARROWS TO SUBMENUS TRIGGERS
-		responsive_menu.find('li:has(> ul)').addClass('zn_res_has_submenu').prepend('<span class="zn_res_submenu_trigger glyphicon glyphicon-chevron-right"></span>');
+		responsive_menu.find('li:has(> ul)').addClass('zn_res_has_submenu').prepend('<span class="zn_res_submenu_trigger fas fa-chevron-right"><i class="fa fa-chevron-right"></i></span>');
 		// ADD BACK BUTTONS
 		responsive_menu.find('.zn_res_has_submenu > ul').addBack().prepend(back_text);
 
@@ -817,27 +941,7 @@ var KallyasConfig = {
 // END Popup Box
 
 
-// Login pop-up element & Contact form pop-up element
-	if(typeof($('.popup-with-form, .kl-cta-ribbon')) != 'undefined') {
-		$('.popup-with-form, .kl-cta-ribbon').magnificPopup({
-			closeBtnInside: true,
-			type: 'inline',
-			preloader: false,
-			focus: '#name',
-			// When elemened is focused, some mobile browsers in some cases zoom in
-			// It looks not nice, so we disable it:
-			callbacks: {
-				beforeOpen: function() {
-					if ($(window).width() < 700) {
-						this.st.focus = false;
-					} else {
-						this.st.focus = '#name';
-					}
-				}
-			}
-		});
-	}
-// END Login pop-up element & Contact form pop-up element
+
 
 
 // Tooltips

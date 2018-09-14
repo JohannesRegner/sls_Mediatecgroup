@@ -37,7 +37,7 @@ lib.mainNav {
             IFSUB < .NO
             IFSUB.wrapItemAndSub = <li class="menu-item-has-children">|</li>
             IFSUB.ATagBeforeWrap = 1
-            IFSUB.stdWrap.wrap = |&nbsp;<i class="fa fa-caret-down hidden-xs"></i>
+            IFSUB.stdWrap.wrap = |&nbsp;<i class="fa fa-caret-down hidden"></i>
 
             ACTIFSUB = 1
             ACTIFSUB < .IFSUB
