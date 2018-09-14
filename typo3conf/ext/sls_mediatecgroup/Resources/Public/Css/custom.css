@@ -133,6 +133,10 @@ red = #b20f24
 }
 
 
+#menu-main-menu ul.minusmargin {
+    margin-top: -40px;
+}
+
 /* ==========================================================================
 ** Responsive styles custom rules
 * These rules are ready to be used for either overrides
@@ -153,6 +157,8 @@ red = #b20f24
     .ansprechpartner .kontaktdetails {
         margin-right:-20px;
     }
+
+
 }
 
 

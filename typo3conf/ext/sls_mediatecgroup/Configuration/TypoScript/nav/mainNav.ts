@@ -36,15 +36,12 @@ lib.mainNav {
             IFSUB = 1
             IFSUB < .NO
             IFSUB.wrapItemAndSub = <li class="menu-item-has-children">|</li>
-        #IFSUB.ATagParams = class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#"
-        #IFSUB.ATagParams = class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-        #IFSUB.ATagParams = class="dropdown-toggle disabled" role="button" data-toggle="dropdown" data-target="#"
             IFSUB.ATagBeforeWrap = 1
             IFSUB.stdWrap.wrap = |&nbsp;<i class="fa fa-caret-down hidden-xs"></i>
 
             ACTIFSUB = 1
             ACTIFSUB < .IFSUB
-            ACTIFSUB.wrapItemAndSub = <li class="dropdown active">|</li>
+            ACTIFSUB.wrapItemAndSub = <li class="menu-item-has-children active">|</li>
 
             CURIFSUB = 1
             CURIFSUB < .ACTIFSUB
@@ -67,7 +64,9 @@ lib.mainNav {
             ACT < .NO
             ACT.wrapItemAndSub = <li class="active">|</li>
 
-            IFSUB < .1.IFSUB
+            IFSUB = 1
+            IFSUB < .NO
+            IFSUB.wrapItemAndSub = <li class="menu-item-has-children">|</li>
             CURIFSUB < .1.CURIFSUB
             ACTIFSUB < .1.ACTIFSUB
 
@@ -79,6 +78,7 @@ lib.mainNav {
 
         3 < .2
     # no submenus anymore
+        3.wrap = <ul class="sub-menu minusmargin">|</ul>
         3.IFSUB >
         3.CURIFSUB >
         3.ACTIFSUB >
