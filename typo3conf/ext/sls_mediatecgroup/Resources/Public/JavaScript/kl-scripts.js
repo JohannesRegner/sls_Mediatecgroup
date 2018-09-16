@@ -268,8 +268,7 @@ var KallyasConfig = {
 // Sticky Header
 	if(KallyasConfig.enableStickyHeader && ! KallyasConfig.enableChaserMenu){
 		var header = $('#header');
-
-		$(window).scroll(function(){
+        $(window).scroll(function(){
 			var scrolled = $(window).scrollTop();
 			if(scrolled < 1){
 				$body.removeClass('sticky-header');
@@ -279,6 +278,7 @@ var KallyasConfig = {
 				header.removeClass('header--is-sticked').addClass('header--no-sticked');
 			}
 			else if (scrolled >= 10) {
+                $body.addClass('sticky-header');
 				header.addClass('header--is-sticked');
 			}
 			else {
