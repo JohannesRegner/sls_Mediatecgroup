@@ -164,6 +164,32 @@ red = #b20f24
     margin-top: -40px;
 }
 
+.leader_item {
+    background: #FFF;
+    margin-bottom: 35px;
+    padding: 30px 30px 15px 30px;
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.15);
+    position: relative;
+    border-radius: 3px;
+}
+
+.leader_item img.leader_item_image {
+    border-bottom:5px solid #b20f24
+}
+
+.leader_item .leader_item_toggle {
+    text-align:center;
+}
+
+.leader_item .leader_item_toggle:hover {
+    color:  #b20f24;
+    cursor: pointer;
+}
+
+.leader_item .leader_item_hiddentext {
+    padding-top:20px;
+}
+
 /* ==========================================================================
 ** Responsive styles custom rules
 * These rules are ready to be used for either overrides
@@ -176,6 +202,10 @@ red = #b20f24
     .ansprechpartner .kontaktdetails {
         margin-right:-20px;
     }
+
+    .borderLeftRed {
+        border-right: 1px solid #b20f24;
+    }
 }
 
 
@@ -184,7 +214,9 @@ red = #b20f24
     .ansprechpartner .kontaktdetails {
         margin-right:-20px;
     }
-
+    .borderLeftRed {
+        border-right: 1px solid #b20f24;
+    }
 
 }
 

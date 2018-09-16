@@ -7,3 +7,5 @@ imports:
 editor:
     config:
         contentsCss: "EXT:sls_mediatecgroup/Resources/Public/Css/rte.css"
+        stylesSet:
+        - { name: "Roter Text", element: "span", attributes: { class: "tcolor"} }

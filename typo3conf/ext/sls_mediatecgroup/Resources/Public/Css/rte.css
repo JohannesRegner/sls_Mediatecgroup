@@ -12,3 +12,7 @@ body {
 .cke_combopanel {
     min-width: 200px;
 }
+
+span.tcolor {
+    color: #b20f24
+}

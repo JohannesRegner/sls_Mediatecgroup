@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+
+    $( ".leader_item_toggle" ).each(function(index) {
+        $(this).on("click", function(){
+            // For the boolean value
+            $(this).find('i').toggleClass('fa fa-chevron-circle-down fa fa-chevron-circle-up');
+            var text = $(this).find('span').text();
+            $(this).find('span').text(
+                text == "mehr anzeigen" ? "weniger anzeigen" : "mehr anzeigen");
+
+            $(this).next('.leader_item_hiddentext').slideToggle();
+        });
+    });
+
     $("#testimonial-slider").owlCarousel({
         items:1,
         itemsDesktop:[1000,3],
