@@ -57,8 +57,8 @@ red = #b20f24
     margin: 0 20px 0px;
 }
 .testimonial .testimonial-content{
-    padding: 35px 25px 35px 50px;
-    margin-bottom: 35px;
+    padding: 35px 50px 35px 50px;
+    margin-bottom: 15px;
     background: #fff;
     border: 1px solid #f0f0f0;
     position: relative;
@@ -94,6 +94,29 @@ red = #b20f24
     top: -16px;
     left: 1px;
 }
+
+.testimonial-content .testimonial-icon-right{
+    width: 50px;
+    height: 45px;
+    background: #b20f24;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    line-height: 42px;
+    position: absolute;
+    top: 37px;
+    right: -19px;
+}
+.testimonial-content .testimonial-icon-right:before{
+    content: "";
+    border-bottom: 16px solid #b20f24;
+    border-right: 18px solid transparent;
+    position: absolute;
+    top: -16px;
+    right: 0px;
+}
+
+
 .testimonial .description{
     font-size: 15px;
     font-style: italic;
@@ -126,6 +149,10 @@ red = #b20f24
 .owl-theme .owl-dot .active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span{
     background: #b20f24;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 0px;
 }
 
 .pswp {
