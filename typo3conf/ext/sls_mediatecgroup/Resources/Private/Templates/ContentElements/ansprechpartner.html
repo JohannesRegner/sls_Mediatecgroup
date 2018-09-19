@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+    <f:if condition="{data.header}">
+        <h3><strong>{data.header}</strong></h3>
+    </f:if>
+    </div>
+    <f:if condition="{data.tx_mask_ansprech_telefon}">
+    <div class="col-sm-12 col-md-12 col-lg-4">
+        <!-- Icon box element / left floated icon, title & content left aligned -->
+        <div class="kl-iconbox kl-iconbox--type-img kl-iconbox--fleft text-left">
+            <div class="kl-iconbox__inner">
+                <!-- Icon/Image wrapper -->
+                <div class="kl-iconbox__icon-wrapper">
+                    <!-- Image -->
+                    <i class="fa fa-phone fa-4x"></i>
+                </div>
+                <!-- Icon/Image wrapper - .kl-iconbox__icon-wrapper-->
+
+                <!-- Content wrapper -->
+                <div class="kl-iconbox__content-wrapper">
+                    <!-- Title wrapper -->
+                    <div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
+                        <!-- Title -->
+                        <h3 class="kl-iconbox__title">
+                            Telefon
+                        </h3>
+                        <!--/ Title -->
+                    </div>
+                    <!--/ Title wrapper -->
+
+                    <!-- Content -->
+                    <div class="kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
+                        <!-- Description -->
+                        <p class="kl-iconbox__desc">
+                            <f:format.nl2br>{data.tx_mask_ansprech_telefon}</f:format.nl2br>
+                        </p>
+                        <!--/ Description -->
+                    </div>
+                    <!--/ Content -->
+                </div>
+                <!--/ Content wrapper - .kl-iconbox__content-wrapper -->
+            </div>
+            <!--/ .kl-iconbox__inner -->
+        </div>
+        <!--/ Icon box element / left floated icon, title & content left aligned -->
+    </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_ansprech_email}">
+    <div class="col-sm-12 col-md-12 col-lg-8">
+        <!-- Icon box element / left floated icon, title & content left aligned -->
+        <div class="kl-iconbox kl-iconbox--type-img kl-iconbox--fleft text-left">
+            <div class="kl-iconbox__inner">
+                <!-- Icon/Image wrapper -->
+                <div class="kl-iconbox__icon-wrapper">
+                    <!-- Image -->
+                    <i class="far fa-5x fa-envelope"></i>
+
+
+                </div>
+                <!-- Icon/Image wrapper - .kl-iconbox__icon-wrapper-->
+
+                <!-- Content wrapper -->
+                <div class="kl-iconbox__content-wrapper">
+                    <!-- Title wrapper -->
+                    <div class="kl-iconbox__el-wrapper kl-iconbox__title-wrapper">
+                        <!-- Title -->
+                        <h3 class="kl-iconbox__title">
+                            E-Mail
+                        </h3>
+                        <!--/ Title -->
+                    </div>
+                    <!--/ Title wrapper -->
+
+                    <!-- Content -->
+                    <div class="kl-iconbox__el-wrapper kl-iconbox__desc-wrapper">
+                        <!-- Description -->
+                        <p class="kl-iconbox__desc">
+                            <f:link.email email="{data.tx_mask_ansprech_email}" />
+                        </p>
+                        <!--/ Description -->
+                    </div>
+                    <!--/ Content -->
+                </div>
+                <!--/ Content wrapper - .kl-iconbox__content-wrapper -->
+            </div>
+            <!--/ .kl-iconbox__inner -->
+        </div>
+        <!--/ Icon box element / left floated icon, title & content left aligned -->
+    </div>
+    </f:if>
+</div>

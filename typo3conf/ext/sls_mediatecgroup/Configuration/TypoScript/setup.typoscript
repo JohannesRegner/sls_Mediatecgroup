@@ -150,6 +150,7 @@ page.headerData.20.value (
         <meta name="msapplication-wide310x150logo" content="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/mstile-310x150.png" />
         <meta name="msapplication-square310x310logo" content="/typo3conf/ext/sls_mediatecgroup/Resources/Public/Icons/Favicons/mstile-310x310.png" />
         <meta name="theme-color" content="#b20f24">
+<meta name="google-site-verification" content="UpXw1e0QAXW_FQty96ObUf9w7gK95nHKg4kupRQXvWQ" />
 )
 
 page.10 = FLUIDTEMPLATE

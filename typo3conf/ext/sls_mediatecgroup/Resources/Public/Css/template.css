@@ -3133,18 +3133,18 @@ a.grayHover img {position:relative;}
 
 
 /*** Icon Box - Default element */
-.kl-iconbox__title {font-family: Open Sans; font-size: 1.4rem; line-height: 1.7; font-weight: 600; font-style: normal; color: #b20f24;}
+.kl-iconbox__title {font-size: 1.4rem; line-height: 1.7; font-weight: 600; font-style: normal; color: #b20f24;}
 .kl-iconbox {margin-bottom: 30px;}
 .kl-iconbox__inner {}
 .kl-iconbox__icon-wrapper,
 .kl-iconbox__title-wrapper,
 .kl-iconbox__desc-wrapper,
-.kl-iconbox__cta-wrapper {margin-top: 0; margin-bottom: 15px;}
+.kl-iconbox__cta-wrapper {margin-top: 0; margin-bottom: 5px;}
 .kl-iconbox__content-wrapper {overflow: hidden;}
 .kl-iconbox__link {}
 .kl-iconbox__title,
 .kl-iconbox__desc {margin:0;}
-.kl-iconbox__desc {font-family: "Open Sans", Helvetica, Arial, sans-serif; font-size: 0.95rem; line-height: 1.7; font-weight: 400; font-style: normal; color: #3e3f3d;}
+.kl-iconbox__desc {font-size: 1.2rem; line-height: 1.7; font-weight: 400; font-style: normal; color: #3e3f3d;}
 .kl-iconbox__icon {line-height: 1; font-size: 42px; -webkit-transition:color .2s cubic-bezier(0.215, 0.610, 0.355, 1.000); transition:color .2s cubic-bezier(0.215, 0.610, 0.355, 1.000);}
 .kl-iconbox__icon.custom-size {font-size: 14px !important;}
 .kl-iconbox--theme-light,
